@@ -1,2 +1,2 @@
-# insourcemailer
-mailservice insource
+# nodemailer
+Send emails using node.
