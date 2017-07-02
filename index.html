@@ -12,8 +12,11 @@
         text = $("#content").val();
         $("#message").text("Sending E-mail...Please wait");
         $.get("http://localhost:3000/send", { to: to}, function (data) {
-          if (data == "sent") {
+          if (data == "success") {
             $("#message").empty().html("<p>Email is been sent at " + to + " . Please check inbox !</p>");
+          }
+          else{
+             $("#message").empty().html("<p>Something went wrong! Please try again later.</p>");
           }
 
         });
